@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "35ba06ec-34f3-47ba-9b26-1737f6d412c9",
+		"name": "Idea Center",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Supported Methods",
+			"id": "a6b8f490-59c8-4ed9-ad3c-2a4b825e0875",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Info/Methods"
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"id": "dcc1f5a8-ad76-4d65-93da-beddcaada753",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\": \"Romek1\",\r\n    \"email\": \"romek_bg@mail.bg\",\r\n    \"password\": \"Romek123\",\r\n    \"rePassword\": \"Romek123\",\r\n    \"acceptedAgreement\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/User/Create"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Authentication Token",
+			"id": "bb7df3d5-174e-4eea-a4e3-f080f9b34c8b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"romek_bg@mail.bg\",\r\n    \"password\": \"Romek123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/User/Authentication"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Ideas",
+			"id": "82ec9c87-4e5c-4b89-a71c-a1be0d42ec03",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiIyYjIxZjdhZi1mNTIxLTQwYWQtODY0MC0zZDViYjE4OTYwMmEiLCJpYXQiOiIwOC8wOS8yMDIzIDEzOjExOjQ2IiwiVXNlcklkIjoiZDBkYTQ5MmUtMWRmZi00NjE1LTVlYmYtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJyb21la19iZ0BtYWlsLmJnIiwiVXNlck5hbWUiOiJSb21layIsImV4cCI6MTY5MTYwODMwNiwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.vuIfoINn05jIZ9hpAIILUjd1KyDBjmrI-DBjqOMtuq0"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/All"
+			},
+			"response": []
+		},
+		{
+			"name": "Create a New Idea",
+			"id": "3cf2c611-5bc9-4832-a67f-6775aea1125e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5ODZjZjk2OS00ZDRiLTQ2M2EtOGU2NS00MDNhZDgzMTAwNWIiLCJpYXQiOiIwOC8wNC8yMDIzIDEyOjQ1OjA2IiwiVXNlcklkIjoiZDBkYTQ5MmUtMWRmZi00NjE1LTVlYmYtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJyb21la19iZ0BtYWlsLmJnIiwiVXNlck5hbWUiOiJSb21layIsImV4cCI6MTY5MTE3NDcwNiwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.R2LBEj4ui59cF2leUy_4o6mpiiymE7SYD3j4ozDwlOg"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"QA beer meeting\",\r\n    \"description\": \"I will have beer meeting with my colleagues\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Create"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Idea",
+			"id": "7c1af00b-0089-488b-90e6-792a3d23259a",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5ODZjZjk2OS00ZDRiLTQ2M2EtOGU2NS00MDNhZDgzMTAwNWIiLCJpYXQiOiIwOC8wNC8yMDIzIDEyOjQ1OjA2IiwiVXNlcklkIjoiZDBkYTQ5MmUtMWRmZi00NjE1LTVlYmYtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJyb21la19iZ0BtYWlsLmJnIiwiVXNlck5hbWUiOiJSb21layIsImV4cCI6MTY5MTE3NDcwNiwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.R2LBEj4ui59cF2leUy_4o6mpiiymE7SYD3j4ozDwlOg"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"QA beer meeting EDITED\",\r\n    \"url\": \"http://alabala.gif\", \r\n    \"description\": \"edited description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Edit?ideaId=bbfeef9c-93eb-4dfe-efdb-08db92c27c0d&Parameter=ideaId",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Edit"
+					],
+					"query": [
+						{
+							"key": "ideaId",
+							"value": "bbfeef9c-93eb-4dfe-efdb-08db92c27c0d"
+						},
+						{
+							"key": "Parameter",
+							"value": "ideaId"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Idea",
+			"id": "2933963e-787a-4c51-b3ff-1c0b5f9f12e2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJKd3RTZXJ2aWNlQWNjZXNzVG9rZW4iLCJqdGkiOiI5ODZjZjk2OS00ZDRiLTQ2M2EtOGU2NS00MDNhZDgzMTAwNWIiLCJpYXQiOiIwOC8wNC8yMDIzIDEyOjQ1OjA2IiwiVXNlcklkIjoiZDBkYTQ5MmUtMWRmZi00NjE1LTVlYmYtMDhkYjkzMTMwMjM2IiwiRW1haWwiOiJyb21la19iZ0BtYWlsLmJnIiwiVXNlck5hbWUiOiJSb21layIsImV4cCI6MTY5MTE3NDcwNiwiaXNzIjoiSWRlYUNlbnRlcl9BcHBfU29mdFVuaSIsImF1ZCI6IklkZWFDZW50ZXJfV2ViQVBJX1NvZnRVbmkifQ.R2LBEj4ui59cF2leUy_4o6mpiiymE7SYD3j4ozDwlOg"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"QA beer meeting EDITED\",\r\n    \"url\": \"http://alabala.gif\", \r\n    \"description\": \"edited description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Idea/Delete?ideaId=bbfeef9c-93eb-4dfe-efdb-08db92c27c0d",
+					"protocol": "http",
+					"host": [
+						"softuni-qa-loadbalancer-2137572849",
+						"eu-north-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"port": "84",
+					"path": [
+						"api",
+						"Idea",
+						"Delete"
+					],
+					"query": [
+						{
+							"key": "ideaId",
+							"value": "bbfeef9c-93eb-4dfe-efdb-08db92c27c0d",
+							"type": "text"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Info/Methods",
+			"id": "5603b774-59f5-4ef6-909f-00b5af8b31a8",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/Info/Methods"
+			},
+			"response": []
+		},
+		{
+			"name": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/User/Create",
+			"id": "eab4c776-9ab9-46df-86e9-2df7f080ca21",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://softuni-qa-loadbalancer-2137572849.eu-north-1.elb.amazonaws.com:84/api/User/Create"
+			},
+			"response": []
+		}
+	]
+}
